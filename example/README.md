@@ -1,3 +1,3 @@
-# flutter_application_1
+# skc_icon_list
 
 A new Flutter project.
