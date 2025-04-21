@@ -44,18 +44,6 @@ class IconScreen extends StatelessWidget {
       (element) => element.key == iconName,
     );
 
-    // if (selectedIcon != null) {
-    //   return Scaffold(
-    //     body: SafeArea(
-    //       child: Center(
-    //         child: Column(
-    //           children: [SizedBox(height: 12), IconBox(iconType: selectedIcon)],
-    //         ),
-    //       ),
-    //     ),
-    //   );
-    // }
-
     return Scaffold(
       body: SafeArea(
         child: Center(
@@ -105,7 +93,10 @@ class IconScreen extends StatelessWidget {
                         .toList(),
               ),
 
-              TitleBox(title: 'Islamic Icons'),
+              TitleBox(
+                title: 'Islamic Icons',
+                more: '(all available icons displayed)',
+              ),
 
               // Divider(height: 20, thickness: 2, color: Colors.blue.shade100),
               SizedBox(height: 12),
@@ -155,9 +146,13 @@ class IconListScreen extends StatelessWidget {
 class TitleBox extends StatelessWidget {
   final String title;
 
-  final String? url;
+  final bool? hideUrl;
 
-  const TitleBox({super.key, required this.title, this.url});
+  final String? more;
+
+  const TitleBox({super.key, required this.title, this.hideUrl, this.more});
+
+  bool get showUrl => !(hideUrl ?? false);
 
   @override
   Widget build(BuildContext context) => Padding(
@@ -183,7 +178,7 @@ class TitleBox extends StatelessWidget {
           Text(title, style: TextStyle(fontSize: 20)),
 
           // Text(' - ', style: TextStyle(fontSize: 20)),
-          if (url != null)
+          if (showUrl)
             GestureDetector(
               onTap: () async {
                 await launchExternal(IconType.mat.url);
@@ -193,6 +188,8 @@ class TitleBox extends StatelessWidget {
                 style: TextStyle(fontSize: 20, color: Colors.blue),
               ),
             ),
+
+          if (more != null) Text(more!, style: TextStyle(fontSize: 20)),
         ],
       ),
     ),
