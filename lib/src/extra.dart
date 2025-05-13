@@ -35,6 +35,7 @@ enum SkcIconType {
   ),
   handsPraying('handsPraying', IconType.fai, FontAwesomeIcons.handsPraying),
   house('house', IconType.fai, FontAwesomeIcons.house),
+  instagram('instagram', IconType.fai, FontAwesomeIcons.instagram),
   kaaba('kaaba', IconType.fai, FontAwesomeIcons.kaaba),
   locationPin('locationPin', IconType.fai, FontAwesomeIcons.locationPin),
   menuOutlined('menuOutlined', IconType.mat, Icons.menu_outlined),

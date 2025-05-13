@@ -3,11 +3,11 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"flutter_bootstrap.js": "1dfc7fefd6b718cd6f7aa76ba65e5f8b",
+const RESOURCES = {"flutter_bootstrap.js": "99a97992facf42e7dafc788cfd63fdf4",
 "version.json": "49bfbba419404d37ad897659194cea1a",
 "index.html": "d9d6563774a6dbe942e0f09fe49ea662",
 "/": "d9d6563774a6dbe942e0f09fe49ea662",
-"main.dart.js": "61e8b1e0f5d5f61ae586ba962e8d2b51",
+"main.dart.js": "7f7d6fb89638f96ec71c22cc76fbd400",
 "flutter.js": "76f08d47ff9f5715220992f993002504",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
@@ -21,7 +21,7 @@ const RESOURCES = {"flutter_bootstrap.js": "1dfc7fefd6b718cd6f7aa76ba65e5f8b",
 "assets/AssetManifest.bin.json": "f7e841a52c6072a66d2304c085fa2fcc",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf": "40aa4874fddfea7bf08da0b618940b50",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf": "b35188414d58b2e433fb821f58f90951",
-"assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf": "b73fd84419667914772ef6f6f72f6c10",
+"assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf": "ccc857d8798b39a294cfcc930568cb05",
 "assets/packages/flutter_islamic_icons/assets/fonts/IslamicIcons.ttf": "83caab3a2c2b140f80725df6ac6e80cc",
 "assets/shaders/ink_sparkle.frag": "ecc85a2e95f5e9f53123dcaf8cb9b6ce",
 "assets/AssetManifest.bin": "8da05625af0d26b313014e78ed00103c",

@@ -51,7 +51,7 @@ class IconScreen extends StatelessWidget {
             children: [
               SizedBox(height: 12),
 
-              TitleBox(title: 'Material Icons'),
+              TitleBox(title: 'Material Icons', sourceUrl: IconType.mat.url),
 
               SizedBox(height: 12),
 
@@ -72,7 +72,7 @@ class IconScreen extends StatelessWidget {
               ),
 
               // Divider(height: 20, thickness: 2, color: Colors.blue.shade100),
-              TitleBox(title: 'FontAwesome Icons'),
+              TitleBox(title: 'FontAwesome Icons', sourceUrl: IconType.fai.url),
 
               SizedBox(height: 12),
 
@@ -96,6 +96,7 @@ class IconScreen extends StatelessWidget {
               TitleBox(
                 title: 'Islamic Icons',
                 more: '(all available icons displayed)',
+                // sourceUrl: IconType.fii.url,
               ),
 
               // Divider(height: 20, thickness: 2, color: Colors.blue.shade100),
@@ -146,13 +147,13 @@ class IconListScreen extends StatelessWidget {
 class TitleBox extends StatelessWidget {
   final String title;
 
-  final bool? hideUrl;
+  final String? sourceUrl;
 
   final String? more;
 
-  const TitleBox({super.key, required this.title, this.hideUrl, this.more});
+  const TitleBox({super.key, required this.title, this.sourceUrl, this.more});
 
-  bool get showUrl => !(hideUrl ?? false);
+  bool get showUrl => (sourceUrl != null);
 
   @override
   Widget build(BuildContext context) => Padding(
@@ -181,10 +182,10 @@ class TitleBox extends StatelessWidget {
           if (showUrl)
             GestureDetector(
               onTap: () async {
-                await launchExternal(IconType.mat.url);
+                await launchExternal(sourceUrl!);
               },
               child: Text(
-                IconType.mat.url,
+                sourceUrl!,
                 style: TextStyle(fontSize: 20, color: Colors.blue),
               ),
             ),
